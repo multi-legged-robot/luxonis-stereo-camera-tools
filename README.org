@@ -2,3 +2,25 @@
 
 Some test implementation for accessing data from [[https://shop.luxonis.com/collections/oak-cameras-1/products/oak-d-pro-w?variant=43715946447071][Luxonis's OAK-D Pro W camera]]
 
+* Installation
+Here are the steps needed to:
++ Obtain this repository on your machine.
++ Install the base python setup
++ Create and enabling a virtual environment
++ Install the dependencies for the project
+
+This example assumes the use of a SSH for Gitlab as well as a Debian based distribution for the packages.
+#+BEGIN_SRC sh
+  git clone git@gitlab.com:sunoc/luxonis-stereo-camera-tools.git
+  cd luxonis-stereo-camera-tools
+#+END_SRC
+
+#+BEGIN_SRC sh
+  sudo apt-get update
+  sudo apt-get install python3 python3-pip python3-venv python3-virtualenv
+
+  virtualenv myluxonisenv
+  source ./myluxonisenv/bin/activate
+
+  pip install -r requirements.txt
+#+END_SRC
